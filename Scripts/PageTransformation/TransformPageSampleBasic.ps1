@@ -1,4 +1,4 @@
-
+#Line 100 and 106 need to be changed to reflect the site to convert classic pages.
 function Use-PnPModernizationFramework
 {
     param(
@@ -97,19 +97,19 @@ $CAMLQueryByExtensionAndName = "<View Scope='Recursive'><Query><Where><And><Cont
 
 # !!!!!!!!!!!!
 # Update below variable to point to the location that holds SharePointPnP.Modernization.Framework.dll and all depending dll's plus the webpartmapping.xml file
-$binaryFolder = "C:\github\sp-dev-modernization\Tools\SharePoint.Modernization\SharePointPnP.Modernization.Framework\bin\Debug"
+$binaryFolder = "D:\Repos\sp-dev-modernization\Scripts\PageTransformation\SharePointPnP.Modernization.v1.0.1811.2 binaries"
 
 # Load the SharePoint Modernization framework
 Use-PnPModernizationFramework -PathToModernizationBinaries $binaryFolder
 
 # Connect to site
-Connect-PnPOnline -Url https://bertonline.sharepoint.com/sites/modernizationtest -Verbose
+Connect-PnPOnline -Url https://hennepinpe.sharepoint.com/teams/DemoTeam/ -Verbose
 
 # Get all pages
-# [string] $query = $CAMLQueryByExtension
+[string] $query = $CAMLQueryByExtension
 
 # Get specific aspx page(s)
-[string] $query = [string]::Format($CAMLQueryByExtensionAndName, "wiki1.aspx")
+# [string] $query = [string]::Format($CAMLQueryByExtensionAndName, "ClassicPage2Convert.aspx")
 
 # Load the pages
 $pages = Get-PnPListItem -List SitePages -Query $query 

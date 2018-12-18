@@ -1,3 +1,4 @@
+#Change line 476 and 481 to use the proper tenant and binary path.
 
 #region Logging and generic functions
 function LogWrite
@@ -473,11 +474,11 @@ function ModernizeSite
 # MAIN section                                        #
 #######################################################
 # Tenant admin url
-$tenantAdminUrl = "https://bertonline-admin.sharepoint.com"
+$tenantAdminUrl = "https://hennepinpe-admin.sharepoint.com"
 # If you use credential manager then specify the used credential manager entry, if left blank you'll be asked for a user/pwd
-$credentialManagerCredentialToUse = "bertonline"
+$credentialManagerCredentialToUse = ""
 # Binary folder for page transformation
-$binaryFolder = "C:\modernization\modernization.framework"
+$binaryFolder = "D:\Repos\sp-dev-modernization\Scripts\PageTransformation"
 
 #region Setup Logging
 $date = Get-Date

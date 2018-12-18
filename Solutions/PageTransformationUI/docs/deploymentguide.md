@@ -17,10 +17,10 @@ You need to create and configure the Modernization center site collection:
   
 ```PowerShell
 # Connect to any given site in your tenant
-Connect-PnPOnline -Url https://contoso.sharepoint.com
+Connect-PnPOnline -Url https://internuntiusmp.sharepoint.com/sites/demoteam
 
 # Update AzureAppID and AzureFunction before running this
-Apply-PnPTenantTemplate -Path .\modernization.pnp -Parameters @{"AzureAppID"="79ad0500-1230-4f7a-a5bb-5e83ce9174f4";"AzureFunction"="https://contosomodernization.azurewebsites.net"}
+Apply-PnPTenantTemplate -Path .\modernization.pnp -Parameters @{"AzureAppID"="d2a70753-8ddb-4ceb-8360-9cd09c8d9bcb";"AzureFunction"="https://sharepointpagemodernizerapp.azurewebsites.net"}
 ```
 
 ## Step 3: Enable the page transformation UI for your site collections
